@@ -9,18 +9,18 @@ import jakarta.servlet.http.HttpSessionListener;
 public class SessionListener implements HttpSessionListener {
     @Override
     public void sessionCreated(HttpSessionEvent se) {
-        HttpSession session = se.getSession();
-        String id = session.getId();
-        System.out.println("session created with id: "+id);
-        session.setMaxInactiveInterval(2);
+//        HttpSession session = se.getSession();
+//        String id = session.getId();
+//        System.out.println("session created with id: "+id);
+//        session.setMaxInactiveInterval(2);
 
     }
 
     @Override
     public void sessionDestroyed(HttpSessionEvent se) {
-        HttpSession session = se.getSession();
-        String id = session.getId();
-        System.out.println("session destroyed with id: "+id);
+//        HttpSession session = se.getSession();
+//        String id = session.getId();
+//        System.out.println("session destroyed with id: "+id);
 
     }
 }
