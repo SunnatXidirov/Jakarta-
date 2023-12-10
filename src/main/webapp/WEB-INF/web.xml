@@ -5,22 +5,31 @@
          version="6.0">
     
    
-    <servlet>
-        <servlet-name>initparaWithXMLServlet</servlet-name>
-        <servlet-class>com.jakarta_ee_initparam.initparaWithXMLServlet</servlet-class>
-        <init-param>
-            <param-name>username</param-name>
-            <param-value>postgres</param-value>
-        </init-param>
-        <init-param>
-            <param-name>password</param-name>
-            <param-value>0303</param-value>
-        </init-param>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>initparaWithXMLServlet</servlet-name>
-        <url-pattern>/initparam</url-pattern>
-    </servlet-mapping>
-    
+<!--    <servlet>-->
+<!--        <servlet-name>initparaWithXMLServlet</servlet-name>-->
+<!--        <servlet-class>com.jakarta_ee_initparam.initparaWithXMLServlet</servlet-class>-->
+<!--        <init-param>-->
+<!--            <param-name>username</param-name>-->
+<!--            <param-value>postgres</param-value>-->
+<!--        </init-param>-->
+<!--        <init-param>-->
+<!--            <param-name>password</param-name>-->
+<!--            <param-value>0303</param-value>-->
+<!--        </init-param>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>initparaWithXMLServlet</servlet-name>-->
+<!--        <url-pattern>/initparam</url-pattern>-->
+<!--    </servlet-mapping>-->
 
+
+    <filter>
+        <filter-name>FilterLogin</filter-name>
+        <filter-class>com.Securty.Filter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>FilterLogin</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>
